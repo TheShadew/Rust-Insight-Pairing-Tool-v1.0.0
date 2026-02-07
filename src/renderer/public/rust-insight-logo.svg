@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" fill="none">
+  <defs>
+    <linearGradient id="outerRing" x1="0" y1="0" x2="512" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#cd412b"/>
+      <stop offset="100%" stop-color="#ef5533"/>
+    </linearGradient>
+    <linearGradient id="innerRing" x1="128" y1="60" x2="384" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5a8a8c"/>
+      <stop offset="100%" stop-color="#7ab0b0"/>
+    </linearGradient>
+    <linearGradient id="iris" x1="180" y1="100" x2="332" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#b0b8c0"/>
+      <stop offset="100%" stop-color="#8a9098"/>
+    </linearGradient>
+    <linearGradient id="pupil" x1="210" y1="110" x2="302" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#cd412b"/>
+      <stop offset="100%" stop-color="#a83520"/>
+    </linearGradient>
+    <radialGradient id="circuitGlow" cx="256" cy="160" r="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5a8a8c" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#5a8a8c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Outer eye shape (orange) -->
+  <path d="M256 20 C380 20 480 100 506 160 C480 220 380 300 256 300 C132 300 32 220 6 160 C32 100 132 20 256 20Z" fill="url(#outerRing)" stroke="#8a3020" stroke-width="3"/>
+  
+  <!-- Teal/cyan accent ring -->
+  <path d="M256 50 C360 50 445 110 475 160 C445 210 360 270 256 270 C152 270 67 210 37 160 C67 110 152 50 256 50Z" fill="none" stroke="url(#innerRing)" stroke-width="5"/>
+  
+  <!-- Inner eye cutout -->
+  <path d="M256 65 C348 65 430 115 458 160 C430 205 348 255 256 255 C164 255 82 205 54 160 C82 115 164 65 256 65Z" fill="#2a2a2a"/>
+  
+  <!-- Iris circle (metallic) -->
+  <circle cx="256" cy="160" r="80" fill="url(#iris)"/>
+  
+  <!-- Circuit pattern overlay on iris -->
+  <circle cx="256" cy="160" r="80" fill="url(#circuitGlow)"/>
+  <path d="M200 140 L220 140 L230 130 M280 130 L290 140 L312 140 M200 180 L220 180 L230 190 M280 190 L290 180 L312 180" stroke="#5a8a8c" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M240 95 L240 110 M272 95 L272 110 M240 210 L240 225 M272 210 L272 225" stroke="#5a8a8c" stroke-width="1.5" fill="none" opacity="0.5"/>
+  
+  <!-- Pupil circle (orange/rust) -->
+  <circle cx="256" cy="160" r="50" fill="url(#pupil)"/>
+  <circle cx="256" cy="160" r="50" fill="none" stroke="#8a3020" stroke-width="2"/>
+  
+  <!-- "Ri" text -->
+  <text x="236" y="175" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="48" fill="#1a1a1a" letter-spacing="-2">
+    <tspan>R</tspan><tspan fill="#cd412b" font-size="42">i</tspan>
+  </text>
+  
+  <!-- Small circuit dots -->
+  <circle cx="190" cy="120" r="3" fill="#5a8a8c" opacity="0.7"/>
+  <circle cx="322" cy="120" r="3" fill="#5a8a8c" opacity="0.7"/>
+  <circle cx="190" cy="200" r="3" fill="#5a8a8c" opacity="0.7"/>
+  <circle cx="322" cy="200" r="3" fill="#5a8a8c" opacity="0.7"/>
+  
+  <!-- Outer decorative lines -->
+  <path d="M100 160 L40 160 M412 160 L472 160" stroke="url(#innerRing)" stroke-width="2" opacity="0.5"/>
+  <path d="M140 80 L110 55 M372 80 L402 55 M140 240 L110 265 M372 240 L402 265" stroke="url(#innerRing)" stroke-width="1.5" opacity="0.4"/>
+</svg>

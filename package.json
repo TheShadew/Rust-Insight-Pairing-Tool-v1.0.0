@@ -1,11 +1,11 @@
 {
-  "name": "@rust-pulse/pairing-app",
+  "name": "@rust-insight/pairing-app",
   "version": "1.0.0",
-  "description": "Rust Pulse Pairing Tool - Pair servers via Steam",
+  "description": "Rust Insight Pairing Tool - Pair servers via Steam",
   "author": "TheShadew",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TheShadew/Rust-Pulse.git"
+    "url": "https://github.com/TheShadew/Rust-Insight-Pairing-Tool-v1.0.0.git"
   },
   "private": true,
   "type": "module",
@@ -18,7 +18,7 @@
     "package:win": "electron-builder --win"
   },
   "dependencies": {
-    "@rust-pulse/core": "*",
+    "@rust-insight/core": "*",
     "electron-store": "^8.1.0"
   },
   "devDependencies": {
@@ -40,8 +40,8 @@
     "lucide-react": "^0.312.0"
   },
   "build": {
-    "appId": "com.rustpulse.pairing",
-    "productName": "Rust Pulse Pairing",
+    "appId": "com.rustinsight.pairing",
+    "productName": "Rust Insight Pairing",
     "artifactName": "${productName}-Setup.${ext}",
     "directories": {
       "output": "release"
@@ -59,7 +59,7 @@
     "publish": {
       "provider": "github",
       "owner": "TheShadew",
-      "repo": "Rust-Pulse"
+      "repo": "Rust-Insight-Pairing-Tool-v1.0.0"
     },
     "win": {
       "target": ["nsis"],

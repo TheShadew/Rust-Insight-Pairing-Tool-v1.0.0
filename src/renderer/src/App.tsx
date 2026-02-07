@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Minus, X, Zap, Cloud, Server, CheckCircle, AlertCircle, ExternalLink, Loader2, Trash2, Power } from 'lucide-react';
+import { Minus, X, Cloud, Server, CheckCircle, AlertCircle, ExternalLink, Loader2, Trash2, Power } from 'lucide-react';
 
 interface PairedServer {
   name: string;
@@ -179,8 +179,8 @@ function App() {
       {/* Title Bar */}
       <div className="h-10 bg-black/50 flex items-center justify-between px-4 select-none" style={{ WebkitAppRegion: 'drag' } as any}>
         <div className="flex items-center gap-2">
-          <Zap className="w-5 h-5 text-orange-500" />
-          <span className="font-semibold text-sm">Rust Pulse Pairing</span>
+          <img src="/rust-insight-logo.svg" alt="Rust Insight" className="w-5 h-5" />
+          <span className="font-semibold text-sm">Rust Insight Pairing</span>
         </div>
         <div className="flex gap-1" style={{ WebkitAppRegion: 'no-drag' } as any}>
           <button
@@ -393,7 +393,7 @@ function App() {
           className="w-full py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
         >
           <ExternalLink className="w-4 h-4" />
-          Open Rust Pulse Web
+          Open Rust Insight Web
         </button>
         <p className="text-xs text-gray-500 mt-2 text-center">
           Use the web app for full features after syncing

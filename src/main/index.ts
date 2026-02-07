@@ -1,12 +1,12 @@
 /**
- * Rust Pulse Pairing Tool - Main Process
+ * Rust Insight Pairing Tool - Main Process
  * Minimal app for Steam pairing + cloud sync only
  */
 
 import { app, BrowserWindow, ipcMain, shell, session } from 'electron';
 import { join } from 'path';
 import Store from 'electron-store';
-import { RustPlusPairing } from '@rust-pulse/core';
+import { RustPlusPairing } from '@rust-insight/core';
 
 // Store for paired servers, entities, and session
 interface PairedEntity {
@@ -30,7 +30,7 @@ interface StoreSchema {
 }
 
 const store = new Store<StoreSchema>({
-  name: 'rust-pulse-pairing',
+  name: 'rust-insight-pairing',
   defaults: {
     servers: {},
     entities: {},
@@ -41,7 +41,7 @@ const store = new Store<StoreSchema>({
 let mainWindow: BrowserWindow | null = null;
 let pairingClient: RustPlusPairing | null = null;
 
-const WEB_APP_URL = 'https://rust-pulseweb-production.up.railway.app';
+const WEB_APP_URL = 'https://www.rustinsight.net';
 
 function createWindow(): void {
   mainWindow = new BrowserWindow({
@@ -105,7 +105,7 @@ function setupIPC(): void {
       });
       await ses.clearStorageData({
         storages: ['cookies', 'localstorage', 'indexdb', 'cachestorage'],
-        origin: 'https://rust-pulseweb-production.up.railway.app',
+        origin: 'https://www.rustinsight.net',
       });
       
       const authWindow = new BrowserWindow({
@@ -274,7 +274,7 @@ function setupIPC(): void {
             // Capture ReactNativeWebView.postMessage calls
             window.ReactNativeWebView = {
               postMessage: function(data) {
-                console.log('[RustPulse] postMessage:', data);
+                console.log('[RustInsight] postMessage:', data);
                 try {
                   var parsed = JSON.parse(data);
                   var token = parsed.token || parsed.Token || parsed.authToken || parsed.AuthToken;

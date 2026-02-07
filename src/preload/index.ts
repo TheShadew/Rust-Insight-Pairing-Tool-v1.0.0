@@ -1,5 +1,5 @@
 /**
- * Rust Pulse Pairing Tool - Preload Script
+ * Rust Insight Pairing Tool - Preload Script
  * Minimal API for pairing and cloud sync
  */
 
