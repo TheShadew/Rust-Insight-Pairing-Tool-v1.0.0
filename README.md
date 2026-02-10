@@ -115,7 +115,7 @@ The source code here proves exactly what the app does - nothing malicious.
 
 ## Questions?
 
-Join the [Rust Insight Discord](https://discord.gg/your-invite) for support.
+Join the [Rust Insight Discord](https://discord.gg/kWapPbwcH7) for support.
 
 ---
 
